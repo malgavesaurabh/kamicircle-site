@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KAMI Circle Privacy Policy</title>
+<meta name="description" content="What KAMI Circle collects, who can see it, and how to delete it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Public+Sans:wght@400;600;700&display=swap">
+<style>
+/* Layout: single readable column, KAMI ink masthead strip, metric-colored dots mark the health data list */
+:root {
+  --bg: #F6F5FB;
+  --surface: #FFFFFF;
+  --ink: #211E3F;
+  --muted: #5F5B7C;
+  --line: #E4E1EF;
+  --accent: #6D5DF5;
+  --sleep: #6D5DF5; --rec: #12A88F; --heart: #EE4D78; --act: #E07410; --hrv: #3D7BF5;
+  --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --body: "Public Sans", "Helvetica Neue", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #15132A; --surface: #1E1B38; --ink: #EEECF8; --muted: #A9A5C6; --line: #2E2A4F; --accent: #A79CFF;
+    --sleep: #A79CFF; --rec: #3FD1B5; --heart: #FF7C9E; --act: #FFA552; --hrv: #78A3FF;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #15132A; --surface: #1E1B38; --ink: #EEECF8; --muted: #A9A5C6; --line: #2E2A4F; --accent: #A79CFF;
+  --sleep: #A79CFF; --rec: #3FD1B5; --heart: #FF7C9E; --act: #FFA552; --hrv: #78A3FF;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; }
+.wrap { max-width: 42rem; margin: 0 auto; padding-inline: 20px; padding-block: 40px 72px; }
+header { display: flex; flex-direction: column; gap: 10px; padding-bottom: 28px; border-bottom: 1px solid var(--line); }
+.brand { display: flex; align-items: center; gap: 12px; }
+.mark { width: 40px; height: 40px; border-radius: 12px; background: #211E3F; color: #fff; display: grid; place-items: center; font-family: var(--display); font-weight: 700; font-size: 20px; position: relative; flex: none; }
+.mark::after { content: ""; position: absolute; width: 7px; height: 7px; border-radius: 50%; background: #E8A600; top: 10px; right: 8px; }
+.brand span { font-family: var(--display); font-weight: 700; font-size: 18px; letter-spacing: 0.02em; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(2rem, 6vw, 2.6rem); line-height: 1.1; letter-spacing: -0.02em; margin: 8px 0 0; text-wrap: balance; }
+.meta { color: var(--muted); font-size: 14px; margin: 0; }
+.lede { font-size: 18px; margin: 4px 0 0; }
+h2 { font-family: var(--display); font-weight: 600; font-size: 1.35rem; letter-spacing: -0.01em; margin: 40px 0 8px; text-wrap: balance; }
+p, li { max-width: 65ch; }
+p { margin: 0 0 12px; }
+ul { padding-left: 1.2rem; margin: 0 0 12px; display: grid; gap: 6px; }
+strong { font-weight: 700; }
+.data { list-style: none; padding: 0; display: grid; gap: 10px; }
+.data li { display: grid; grid-template-columns: 10px 1fr; gap: 12px; align-items: baseline; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; transform: translateY(1px); }
+.data li > div { min-width: 0; }
+.data b { display: block; font-weight: 700; }
+.data small { color: var(--muted); font-size: 14px; }
+.share { overflow-x: auto; margin: 8px 0 12px; }
+table { border-collapse: collapse; width: 100%; min-width: 26rem; font-size: 15px; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 700; }
+.contact { margin-top: 40px; padding: 18px; border-radius: 16px; background: var(--surface); border: 1px solid var(--line); }
+.contact p { margin: 0; }
+.addr { font-weight: 700; user-select: all; word-break: break-all; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+footer { margin-top: 32px; color: var(--muted); font-size: 14px; }
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><div class="mark" aria-hidden="true">K</div><span>KAMI Circle</span></div>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Updated October 31, 2026 · Applies to the KAMI Circle iPhone and Android apps (private beta)</p>
+    <p class="lede">KAMI lets a small circle of friends see how each of them slept and recovered, each compared with their own normal. This page explains what we collect, who can see it, and how to delete it.</p>
+  </header>
+
+  <h2>The short version</h2>
+  <ul>
+    <li>We collect only what KAMI needs to show your scores, workouts and your circle’s feed and chat.</li>
+    <li>Your friends see only what your sharing settings allow, metric by metric.</li>
+    <li>We never sell your data, never show ads, and never use health data for marketing.</li>
+    <li>You can delete your account and all of your data from inside the app at any time.</li>
+  </ul>
+
+  <h2>What we collect</h2>
+  <p><strong>Account details.</strong> Your email address (to sign you in), the display name you choose, your date of birth (only to confirm you are 18 or older), your time zone (so days line up with your local calendar), and your avatar: a preset picture and color, or a profile photo you upload.</p>
+  <p><strong>Health data you choose to connect.</strong> KAMI stores daily totals and workout summaries. It does not collect location or GPS routes, and it does not store minute-by-minute heart-rate readings.</p>
+  <ul class="data">
+    <li><span class="dot" style="background: var(--sleep)"></span><div><b>Sleep</b><small>Time asleep per night, when you fell asleep and woke up, and minutes in each sleep stage, from Whoop, Oura or Apple Health. Bedtimes and stages are shown only to you.</small></div></li>
+    <li><span class="dot" style="background: var(--hrv)"></span><div><b>Heart rate variability</b><small>Nightly average, from Whoop or Oura (RMSSD) or Apple Watch (SDNN).</small></div></li>
+    <li><span class="dot" style="background: var(--heart)"></span><div><b>Resting heart rate</b><small>Daily value, from Whoop or Apple Health, or your lowest heart rate during sleep from Oura.</small></div></li>
+    <li><span class="dot" style="background: var(--act)"></span><div><b>Steps</b><small>Daily total, from Whoop, from Oura, from Apple Health on iPhone, or from Health Connect on Android. On Android, KAMI also stores how many minutes in each 15-minute block you were walking or running and at roughly what pace (not the step counts themselves), to work out Kinetic Load, plus a short technical note about which apps record your steps.</small></div></li>
+    <li><span class="dot" style="background: var(--rec)"></span><div><b>Whoop and Oura extras</b><small>Breathing rate during sleep, and Whoop’s own recovery score stored for reference. KAMI’s scores don’t use the recovery score.</small></div></li>
+    <li><span class="dot" style="background: var(--act)"></span><div><b>Workouts</b><small>Sport, start time and duration, plus strain, average and max heart rate, minutes in each heart-rate zone, calories and distance when available, from Whoop, Oura or Apple Health. For Apple Watch workouts, your phone reads the heart-rate readings taken during the workout and sends only these summaries; the readings themselves are not uploaded. For Oura workouts, our server reads Oura’s heart-rate readings for the workout’s time window to work out the average and maximum, and stores only those two numbers. No GPS routes.</small></div></li>
+  </ul>
+  <p><strong>What KAMI calculates.</strong> Your personal baseline (your 30-day normal range), a daily readiness score and your daily Kinetic Load, computed from your own data only.</p>
+  <p><strong>How hard your day felt.</strong> Now and then KAMI asks “How hard was today?” on a 0–10 scale. Answering is optional. We store your answer with the date and use it, together with everyone’s answers, to tune how Kinetic Load is calculated. It is never shown to your circles.</p>
+  <p><strong>Circle activity.</strong> Which circles you belong to, your sharing settings, cheers you send and receive, the Stepathons you join, and what you post: posts, photos, comments, likes and chat messages. KAMI also posts some things for you in your circles: finished workouts, personal bests (for example a 30-day HRV high, without numbers) and Stepathon wins, each only if you share that metric.</p><p><strong>Safety.</strong> When you report something or block someone, we keep the report or block so we can act on it.</p>
+  <p><strong>Notifications.</strong> If you turn on notifications, we store your phone’s push token (an address Apple or Google uses to deliver notifications to KAMI on your phone) and your choices in Me › Notifications. Notifications are delivered through Expo’s push service, Apple Push Notification service and Google Firebase Cloud Messaging; they carry only short text such as “Readiness 72 · above your normal” or “Kaushal cheered you on”. Signing out removes the token from our server.</p>
+  <p><strong>Unread badges.</strong> To show how many new chat messages, posts and Stepathon updates you haven’t seen, we store when you last opened the chat, the feed and the Stepathon tab in each circle. Nothing else about what you read is recorded. A notification can also carry that count so your app icon shows it.</p>
+  <p><strong>Connection details.</strong> If you connect Whoop or Oura, we store the access tokens they give us so we can fetch new data every two hours. Tokens stay on our server and are never sent to the app or to other users.</p>
+  <p><strong>Preferred device.</strong> If you wear more than one device, you can choose which one KAMI Circle uses for sleep and recovery, steps and workouts. We store that choice. Readings from every connected device are kept with their source and never averaged together.</p>
+
+  <h2>Apple Health</h2>
+  <p>On iPhone, KAMI asks Apple Health for read-only access to sleep, resting heart rate, heart rate variability, steps, workouts, and heart rate during workouts. KAMI never writes to Apple Health. Data read from Apple Health is used only to provide KAMI’s features, including the optional Coach beta described below. It is never used for advertising, never sold, and never shared with third parties for any other purpose. You can turn off access at any time in Settings › Health › Data Access &amp; Devices › KAMI.</p>
+
+  <h2>Health Connect (Android)</h2>
+  <p>On Android, KAMI asks Health Connect for read-only access to your step counts, and nothing else. Health Connect gathers steps from apps such as Samsung Health, Google Fit and Fitbit, and from your phone. KAMI never writes to Health Connect. Data read from Health Connect is used only to show your steps and Stepathon results and to work out your Kinetic Load. It is never used for advertising, never sold, and never shared with third parties for any other purpose. KAMI’s use of information received from Health Connect follows the Health Connect Permissions policy, including its Limited Use requirements. You can turn off access at any time in Health Connect › App permissions › KAMI.</p>
+
+  <h2>Who can see your data</h2>
+  <p>Only people in a circle you joined, and only at the level you set for each metric:</p>
+  <div class="share">
+    <table>
+      <thead><tr><th scope="col">Setting</th><th scope="col">What your circle sees</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Exact</strong></td><td>The number and how it compares with your normal.</td></tr>
+        <tr><td><strong>Trend</strong></td><td>Only above, normal or below your normal. No number.</td></tr>
+        <tr><td><strong>Off</strong></td><td>Nothing for that metric.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Workouts follow the same levels: Exact shows the details, Trend shows only the sport and duration, Off hides them and stops workout posts.</p><p>Posts, photos, comments and chat messages are visible only to members of the circle where you posted them. Your profile photo is visible only to people who share a circle with you. Photos are stored privately, not on public links.</p><p>Your date of birth, email address, raw daily records and connection tokens are never visible to other members. Leaving a circle stops that circle from seeing your data.</p>
+
+  <h2>Services we use</h2>
+  <ul>
+    <li><strong>Supabase</strong> hosts our database, photo storage, sign-in and server functions (United States).</li>
+    <li><strong>Google (Gmail)</strong> delivers the sign-in code emails during the beta.</li>
+    <li><strong>Whoop</strong> provides your Whoop data after you approve access on Whoop’s own page.</li>
+    <li><strong>Oura</strong> provides your Oura data after you approve access on Oura’s own page. Oura data is used only to show your own scores and what you share with your circles; it is never sent to OpenAI or any other AI service.</li>
+    <li><strong>Expo</strong> builds and delivers app updates and forwards notifications to Apple and Google. It receives notification text, not your health records.</li>
+    <li><strong>Apple and Google</strong> deliver notifications to your phone (Apple Push Notification service, Firebase Cloud Messaging).</li>
+    <li><strong>Apple TestFlight and Google Play</strong> distribute the beta app, under their own privacy policies.</li>
+    <li><strong>OpenAI</strong> writes your daily KAMI Coach brief, only if you turn on the Coach beta. It receives your own numbers from the last 7 days (readiness, sleep, heart rate variability, resting heart rate, steps, workouts and Kinetic Load), never your name, email, photos, posts, chat or anything about your friends, and never Oura data. OpenAI doesn’t use this data to train its models by default. You can turn Coach off at any time from the Coach card on Today.</li>
+  </ul>
+  <p>We don’t use analytics, advertising or tracking SDKs.</p>
+
+  <h2>How long we keep it</h2>
+  <p>We keep your data while your account exists, so your baseline and history follow you even if you switch devices. When you delete your account, your profile, photos, health data, workouts, scores, posts, comments, likes, chat messages, cheers, connections and tokens are permanently deleted right away. Circles you created pass to another member, or are deleted if you were the only one.</p>
+
+  <h2>Your choices</h2>
+  <ul>
+    <li><strong>Delete your account:</strong> in the app, open Me › Delete account.</li>
+    <li><strong>Notifications:</strong> choose them in Me › Notifications, or turn them off in your phone’s Settings.</li>
+    <li><strong>Change what you share:</strong> open Circle › What I share.</li>
+    <li><strong>Delete a post, comment or message:</strong> tap ⋯ on a post, or press and hold a comment or message.</li>
+    <li><strong>Report or block someone:</strong> tap ⋯ on their post, or press and hold their comment or message. Reports are reviewed within 24 hours.</li>
+    <li><strong>Disconnect Whoop:</strong> remove KAMI in your Whoop account’s connected apps.</li>
+    <li><strong>Disconnect Oura:</strong> remove KAMI Circle in your Oura account’s connected apps (on the Oura website, under your account’s data access settings).</li>
+    <li><strong>Choose your preferred device:</strong> open Me › Devices.</li>
+    <li><strong>Stop Apple Health access:</strong> turn it off in the iPhone Settings path above.</li>
+    <li><strong>Stop Health Connect access:</strong> open Health Connect › App permissions › KAMI and turn off Steps.</li>
+    <li><strong>Get a copy of your data</strong> or ask any question: email us at the address below.</li>
+  </ul>
+
+  <h2>Security</h2>
+  <p>Data travels over encrypted connections and is stored encrypted at rest by our host. Database rules ensure each person can read only their own raw data, and friends can see only what the sharing settings allow.</p>
+
+  <h2>Age and medical use</h2>
+  <p>KAMI is for people 18 and older. KAMI is not a medical device. It doesn’t diagnose or treat any condition, and it isn’t a substitute for advice from a doctor.</p>
+
+  <h2>Changes</h2>
+  <p>If we change this policy, we’ll update the date at the top and tell you in the app before the change applies to data we already hold.</p>
+
+  <div class="contact">
+    <p>Questions or deletion requests</p>
+    <p class="addr">malgavesaurabh@gmail.com</p>
+    <p class="meta" style="margin-top:6px">KAMI Circle is built by Saurabh Malgave and Kaushal Shetty, St. Louis, Missouri.</p>
+  </div>
+
+  <footer>KAMI Circle · Keeper of All Metrics and Insights · <a href="index.html">Home</a> · <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></footer>
+</div>
+
+</body>
+</html>
